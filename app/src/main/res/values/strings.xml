@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Metronome</string>
+    <string name="decreaseTempoText">-</string>
+    <string name="increaseTempoText">+</string>
+    <string name="tapTempoText">TAP</string>
+    <string name="enable">Enable</string>
+</resources>
