@@ -21,6 +21,8 @@
             android:layout_marginStart="52dp"
             android:layout_marginTop="45dp"
             android:text="@string/enable"
+            android:checked="@{viewModel.enabled}"
+            android:onClick="@{() -> viewModel.toggleEnabled()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,6 +33,7 @@
             android:layout_marginStart="56dp"
             android:layout_marginTop="120dp"
             android:text="@string/decreaseTempoText"
+            android:onClick="@{() -> viewModel.decreaseTempo()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,10 +41,11 @@
             android:id="@+id/increaseTempo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="266dp"
             android:layout_marginTop="120dp"
-            android:layout_marginEnd="57dp"
             android:text="@string/increaseTempoText"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{() -> viewModel.increaseTempo()}"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -58,14 +62,25 @@
 
         <EditText
             android:id="@+id/editTextNumber"
-            android:layout_width="87dp"
+            android:layout_width="50dp"
             android:layout_height="42dp"
-            android:layout_marginStart="162dp"
+            android:layout_marginStart="180dp"
             android:layout_marginTop="120dp"
             android:ems="10"
             android:inputType="number"
+            android:text="@{viewModel.tempo.toString()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="184dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tempoLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

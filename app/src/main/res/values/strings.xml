@@ -4,4 +4,5 @@
     <string name="increaseTempoText">+</string>
     <string name="tapTempoText">TAP</string>
     <string name="enable">Enable</string>
+    <string name="tempoLabel">Tempo</string>
 </resources>
