@@ -19,5 +19,7 @@ class MainActivity: AppCompatActivity() {
 
         binding.viewModel = viewModel
         binding.setLifecycleOwner(this)
+
+        viewModel.play()
     }
 }
